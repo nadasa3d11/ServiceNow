@@ -1,0 +1,81 @@
+<script>
+    let grade;
+    let num;
+    let another_student;
+    const all_students = [];
+    do {
+        let grade_arr = [];
+        while (!(Student_name = prompt("Enter the Name"))) {
+            alert("Please enter a name to continue.");
+        }
+        while (!(Student_Age = prompt("Enter the Age"))) {
+            alert("Please enter an age to continue.");
+        }
+
+        while (true) {
+            while (!(grade = prompt("Enter the grade"))) {
+                alert("Please enter a grade between 0 to 100 to continue.");
+            }
+            if (grade >= 0 && grade <= 100 && grade !== null) {
+                grade_arr.push(grade);
+            }
+            else if (grade == 'stop' || grade == 'Stop') {
+                if (grade_arr.length < 3) {
+                    alert("Please put another grade")
+                }
+                else {
+                    break;
+                }
+            }
+        }
+
+        let sum = 0;
+        let maxGrade = Math.max(...grade_arr);
+        let minGrade = Math.min(...grade_arr);
+        for (let i = 0; i < grade_arr.length; i++) {
+            sum = sum + parseInt(grade_arr[i]);
+        }
+        let avgGrade = sum / grade_arr.length;
+        let student_record = {
+            name: Student_name,
+            age: Student_Age,
+            grades: [...grade_arr],
+            average: avgGrade,
+            max: maxGrade,
+            min: minGrade,
+            sum: sum
+        };
+        all_students.push(student_record);
+        for (let i = 0; i < grade_arr.length; i++) {
+            if (grade_arr[i] > 90) {
+                alert("the grade is " + grade_arr[i] + " \nthe level in this course is Excellent")
+            }
+            else if (grade_arr[i] > 80) {
+                alert("the grade is " + grade_arr[i] + " \nthe level in this course is Very Good")
+            }
+            else if (grade_arr[i] > 70) {
+                alert("the grade is " + grade_arr[i] + " \nthe level in this course is Good")
+            }
+            else if (grade_arr[i] > 60) {
+                alert("the grade is " + grade_arr[i] + " \nthe level in this course is Pass")
+            }
+            else {
+                alert("the grade is " + grade_arr[i] + " \nthe level in this course is Fail")
+            }
+        }
+        another_student = prompt("Do You want to enter another student?");
+    } while (another_student != null);
+
+    alert("Full Student Database:");
+    for (i = 0; i < all_students.length; i++) {
+        alert(
+            "Student Name: " + all_students[i].name + "\n" +
+            "Student Age: " + all_students[i].age + "\n" +
+            "All Grades: " + all_students[i].grades + "\n" +
+            "Average Grade: " + all_students[i].average + "\n" +
+            "Max Grade: " + all_students[i].max + "\n" +
+            "Min Grade: " + all_students[i].min + "\n" +
+            "The Total: " + all_students[i].sum + "/"+100*all_students[i].grades.length
+        )
+    }
+</script>
