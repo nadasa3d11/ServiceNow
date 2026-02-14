@@ -1,0 +1,17 @@
+<script>
+    num = prompt("Enter the number")
+    power = prompt("Enter the power")
+    function Power(n, p) {
+        if (n === null || p === null) {
+            return "Canceled"
+        }
+        res = 1;
+        for (i = 0; i < p; i++) {
+            res = res * n;
+        }
+        return res;
+    }
+    alert(
+        Power(num, power)
+    );
+</script>
