@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fresh Mart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #2ecc71;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            margin-top: 70px;
+            margin-bottom: 60px;
+            padding: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #145a32;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #div1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 20px;
+            justify-items: center;
+            margin-left: 250px;
+            margin-right: 250px;
+        }
+
+        .div-box {
+            width: 650px;
+            height: 170px;
+            border-style: dashed;
+            border-radius: 5%;
+            border-color: rgb(190, 189, 189);
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            transition: 0.3s;
+            overflow: hidden;
+        }
+        .div-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            left: 0;
+            top: 0;
+            width: 120px;
+            height: 100%;
+            border-top-left-radius: 6%;
+            border-bottom-left-radius: 6%;
+        }
+
+        .span {
+            font-weight: bolder;
+            color: aliceblue;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .pr {
+            padding-left: 20px;
+        }
+
+        .pr1 {
+            font-size: 150%;
+            font-weight: bolder;
+        }
+
+        .pr2 {
+            font-size: 100%;
+            color: gray;
+        }
+
+        .pr3 {
+            border-style: dashed;
+            display: inline-block;
+            margin-left: 20px;
+            padding: 10px;
+            border-radius: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Fresh Mart</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html">Fruits & Vegetables</a></li>
+            <li><a href="dairy.html">Dairy</a></li>
+            <li><a href="bakery.html">Bakery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="offers.html">Offers</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>
+            Exclusive Member Rewards
+        </h1>
+        <br><br>
+        <p style="text-align: center;">
+            Clip these digital Coupons to save big in your next visit!
+        </p>
+        <br><br>
+        <div id="div1">
+            <div class="div-box">
+                <div class="card" style="background: #198754;">
+                    <span class="span" style="font-size: 250%; padding-top: 40px;">20% </span>
+                    <span class="span" style="font-size: 100%; padding-bottom: 50px;">OFF</span>
+                </div>
+                <div style="padding-top: 10px;">
+                    <p class="pr pr1">First Order Discount</p><br>
+                    <p class="pr pr2">valid on all fresh produce items</p><br>
+                    <p class="pr3" style="color:  #198754;">FRESH20</p>
+                </div>
+            </div>
+            <div class="div-box">
+                <div class="card" style="background: #ffc107;">
+                    <span class="span" style="font-size: 250%; padding-top: 40px;">10$</span>
+                    <span class="span" style="font-size: 100%; padding-bottom: 50px;">Back</span>
+                </div>
+                <div style="padding-top: 10px;">
+                    <p class="pr pr1">Weekend Special</p><br>
+                    <p class="pr pr2">Spend $50 or more and save $10</p><br>
+                    <p class="pr3" style="color:  #ffc107;">SAVE10</p>
+                </div>
+            </div>
+            <div class="div-box">
+                <div class="card" style="background: #0d6efd;">
+                    <span class="span" style="font-size: 250%; padding-top: 40px;">Free</span>
+
+                </div>
+                <div style="padding-top: 10px;">
+                    <p class="pr pr1">Bakery Bonus</p><br>
+                    <p class="pr pr2">Free baguette with any pastry purchase</p><br>
+                    <p class="pr3" style="color: #0d6efd;">YUMMY</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        Copyright © 2026 Fresh Mart
+    </footer>
+</body>
+
+</html>

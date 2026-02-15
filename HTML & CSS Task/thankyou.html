@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fresh Mart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #2ecc71;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #145a32;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        main {
+            margin-top: 300px;
+            margin-bottom: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: fill;
+            box-shadow: black;
+
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #ffd828;
+            color: rgb(0, 0, 0);
+            border-radius: 20px;
+            cursor: pointer;
+            width: 200px;
+            height: 50px;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        h5 {
+            color: gray;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Fresh Mart</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html">Fruits & Vegetables</a></li>
+            <li><a href="dairy.html">Dairy</a></li>
+            <li><a href="bakery.html">Bakery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="offers.html">Offers</a></li>
+        </ul>
+    </nav>
+    <main>
+        <img
+            src="https://static.vecteezy.com/system/resources/previews/026/530/514/non_2x/green-check-box-task-completed-questionnaire-choice-vector.jpg">
+        <h1>Message Sent Successfully!</h1>
+        <h5>Thank you for reaching out to FreshMart. our team will get back to you within 24 hours.</h5>
+        <a href="home.html">
+            <button>Return to home</button>
+        </a>
+    </main>
+    <footer class="footer">
+        Copyright © 2026 Fresh Mart
+    </footer>
+</body>
+
+</html>

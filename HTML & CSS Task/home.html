@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Fresh Mart</title>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: 'Segoe UI';
+      }
+
+      .navbar {
+         width: 100%;
+         background-color: #2ecc71;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 15px 40px;
+         position: fixed;
+         top: 0;
+         left: 0;
+         z-index: 100;
+      }
+
+      .logo {
+         font-size: 22px;
+         font-weight: bold;
+         color: white;
+      }
+
+      .nav-links {
+         list-style: none;
+         display: flex;
+         gap: 25px;
+      }
+
+      .nav-links a {
+         color: white;
+         text-decoration: none;
+         font-size: 16px;
+      }
+
+      .nav-links a:hover {
+         text-decoration: underline;
+      }
+
+      .hero {
+         width: 100%;
+         height: 80vh;
+         background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url("https://fruitgrowers.com/wp-content/uploads/2019/05/assorted-fruits-on-brown-wooden-racks-1.jpg");
+         background-size: cover;
+         background-position: center;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         color: white;
+         padding-top: 60px;
+      }
+
+      .hero-content h1 {
+         font-size: 48px;
+         margin-bottom: 15px;
+      }
+
+      .hero-content button {
+         padding: 12px 30px;
+         font-size: 16px;
+         border: none;
+         background-color: #2ecc71;
+         color: white;
+         border-radius: 25px;
+         cursor: pointer;
+         transition: 0.3s;
+      }
+
+      .hero-content button:hover {
+         background-color: #27ae60;
+      }
+
+      .cards-section {
+         padding: 80px 20px;
+         background-color: #f7f7f7;
+      }
+
+      .cards-container {
+         max-width: 1200px;
+         margin: 0 auto;
+         display: flex;
+         justify-content: center;
+         gap: 30px;
+         flex-wrap: wrap;
+      }
+
+      .card {
+         background: white;
+         width: 280px;
+         border-radius: 15px;
+         overflow: hidden;
+         text-align: center;
+         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+         transition: 0.3s;
+         padding-bottom: 20px;
+      }
+
+      .card:hover {
+         transform: translateY(-10px);
+      }
+
+      .card img {
+         width: 100%;
+         height: 180px;
+         object-fit: cover;
+      }
+
+      .card h3 {
+         margin: 15px 0;
+         text-transform: capitalize;
+      }
+
+      .card button {
+         padding: 10px 25px;
+         border: none;
+         background-color: #2ecc71;
+         color: white;
+         border-radius: 20px;
+         cursor: pointer;
+      }
+
+      .footer {
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         background: #145a32;
+         color: white;
+         text-align: center;
+         padding: 15px 0;
+      }
+   </style>
+</head>
+
+<body>
+   <nav class="navbar">
+      <div class="logo">Fresh Mart</div>
+      <ul class="nav-links">
+         <li><a href="#">Home</a></li>
+         <li><a href="products.html">Fruits & Vegetables</a></li>
+         <li><a href="dairy.html">Dairy</a></li>
+         <li><a href="bakery.html">Bakery</a></li>
+         <li><a href="contact.html">Contact</a></li>
+         <li><a href="gallery.html">Gallery</a></li>
+         <li><a href="offers.html">Offers</a></li>
+      </ul>
+   </nav>
+
+   <header class="hero">
+      <div class="hero-content">
+         <h1>Freshness Delivered To Your Door</h1>
+         <p>Shop over 5,000 items from our local market.</p>
+         <br>
+         <button>Shop Now</button>
+      </div>
+   </header>
+
+   <main class="cards-section">
+      <div class="cards-container">
+         <div class="card">
+            <img
+               src="https://www.perfection.com.au/hs-fs/hubfs/Produce_LR_Category_Proprietary%20Fruit%20and%20Vegetables%20Group_Styled_2022_03%20(1).jpg?width=1500&name=Produce_LR_Category_Proprietary%20Fruit%20and%20Vegetables%20Group_Styled_2022_03%20(1).jpg">
+            <h3>Fruits & Vegetables</h3>
+            <a href="products.html"><button>Shop Now</button></a>
+
+         </div>
+
+         <div class="card">
+            <img
+               src="https://images.squarespace-cdn.com/content/v1/5ea9ec8fdd995955ed38dcdd/62dda88d-76ca-4e61-acb9-a79b42ed5263/midnys.jpg">
+            <h3>Bakery</h3>
+            <a href="bakery.html"><button>Shop Now</button></a>
+         </div>
+
+         <div class="card">
+            <img
+               src="https://voca-land.sgp1.cdn.digitaloceanspaces.com/43844/1653050072933/a95954ead9dac8be45df3954fa4afa974762e4c52ef1039d3a9a68ff101660b3.jpg">
+            <h3>Dairy</h3>
+            <a href="dairy.html"><button>Shop Now</button></a>
+         </div>
+      </div>
+   </main>
+
+   <footer class="footer">
+      Copyright © 2026 Fresh Mart
+   </footer>
+</body>
+
+</html>

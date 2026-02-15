@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fresh Mart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .bg-fresh {
+            background-color: #2ecc71 !important;
+        }
+
+        .bg-footer {
+            background-color: #145a32 !important;
+        }
+
+        .img-box {
+            position: relative;
+            transition: 0.3s ease;
+            z-index: 1;
+            border-radius: 8px;
+        }
+
+        .img-box img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+        .img-box:hover {
+            transform: scale(1.1);
+            z-index: 10;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .img-box span {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+            opacity: 0;
+            transition: 0.3s;
+            z-index: 2;
+        }
+
+        .img-box:hover img {
+            filter: brightness(50%);
+
+        }
+
+        .img-box:hover span {
+            opacity: 1;
+        }
+
+        body {
+            padding-bottom: 60px;
+            padding-top: 70px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-fresh fixed-top px-lg-5">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-3" href="home.html">Fresh Mart</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navGallery">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navGallery">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link text-white" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="products.html">Fruits & Vegetables</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="dairy.html">Dairy</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="bakery.html">Bakery</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold text-white" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="offers.html">Offers</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="container text-center my-5">
+        <h1 class="display-4 fw-bold">Store Gallery</h1>
+        <p class="lead text-muted">Take a virtual tour of our fresh aisles and local branches</p>
+    </header>
+    <main class="container my-4">
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                <div class="img-box shadow-sm w-100" style="max-width: 300px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmNmtiKe1ts_QSG_scLRR7f46Q7Jha-zPvJw&s"
+                        class="w-100">
+                    <span>Fruits</span>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                <div class="img-box shadow-sm w-100" style="max-width: 300px;">
+                    <img src="https://assets-eu-01.kc-usercontent.com/aa24ba70-9a12-01ae-259b-7ef588a0b2ef/b0b7f429-8d2d-4199-836f-43de59e04360/il-valentino-bakery-and-cafe-grand-canal-dock-dublin-city.jpg"
+                        class="w-100">
+                    <span>Bakery</span>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                <div class="img-box shadow-sm w-100" style="max-width: 300px;">
+                    <img src="https://cdn.britannica.com/17/196817-050-6A15DAC3/vegetables.jpg?w=400&h=300&c=crop"
+                        class="w-100">
+                    <span>Vegetables</span>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                <div class="img-box shadow-sm w-100" style="max-width: 300px;">
+                    <img src="https://nutritionsource.hsph.harvard.edu/wp-content/uploads/2020/10/shutterstock_1232966839-1024x742.jpg"
+                        class="w-100">
+                    <span>Dairy</span>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                <div class="img-box shadow-sm w-100" style="max-width: 300px;">
+                    <img src="https://vid.alarabiya.net/images/2019/03/25/4eea9d9a-580e-4f09-8cdf-fb362343e1d7/4eea9d9a-580e-4f09-8cdf-fb362343e1d7.jpg?crop=1:1&width=1000"
+                        class="w-100">
+                    <span>Legumes</span>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                <div class="img-box shadow-sm w-100" style="max-width: 300px;">
+                    <img src="https://quietly-image-uploads.s3.amazonaws.com/highproteindiets_1280px_97576cceb35a44cd86625a4d974aa827.jpeg"
+                        class="w-100">
+                    <span>Protein</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-footer text-white py-3 text-center fixed-bottom">
+        Copyright © 2026 Fresh Mart
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fresh Mart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #2ecc71;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            margin-top: 70px;
+            margin-bottom: 60px;
+            padding: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #145a32;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        #div1 {
+            margin-left: 500px;
+            margin-right: 500px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            justify-items: center;
+        }
+
+        .img-box {
+            position: relative;
+            width: 300px;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .img-box span {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .img-box:hover img {
+            filter: brightness(50%);
+            transform: scale(1.1);
+        }
+
+        .img-box:hover span {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Fresh Mart</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html">Fruits & Vegetables</a></li>
+            <li><a href="dairy.html">Dairy</a></li>
+            <li><a href="bakery.html">Bakery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="offers.html">Offers</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>
+            Store Gallery
+        </h1>
+        <br><br>
+        <h5 style="text-align: center; font-size: medium;">
+            Take a virtual tour of our fresh aisles and local branches
+        </h5>
+    </main>
+    <div id="div1">
+        <div class="img-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmNmtiKe1ts_QSG_scLRR7f46Q7Jha-zPvJw&s">
+            <span>Fruits</span>
+        </div>
+        <div class="img-box">
+            <img
+                src="https://assets-eu-01.kc-usercontent.com/aa24ba70-9a12-01ae-259b-7ef588a0b2ef/b0b7f429-8d2d-4199-836f-43de59e04360/il-valentino-bakery-and-cafe-grand-canal-dock-dublin-city.jpg">
+            <span>Bakery</span>
+        </div>
+        <div class="img-box">
+            <img src="https://cdn.britannica.com/17/196817-050-6A15DAC3/vegetables.jpg?w=400&h=300&c=crop">
+            <span>Vegetables</span>
+        </div>
+        <div class="img-box">
+            <img
+                src="https://nutritionsource.hsph.harvard.edu/wp-content/uploads/2020/10/shutterstock_1232966839-1024x742.jpg">
+            <span>Dairy</span>
+        </div>
+        <div class="img-box">
+            <img
+                src="https://vid.alarabiya.net/images/2019/03/25/4eea9d9a-580e-4f09-8cdf-fb362343e1d7/4eea9d9a-580e-4f09-8cdf-fb362343e1d7.jpg?crop=1:1&width=1000">
+            <span>Legumes</span>
+        </div>
+        <div class="img-box">
+            <img
+                src="https://quietly-image-uploads.s3.amazonaws.com/highproteindiets_1280px_97576cceb35a44cd86625a4d974aa827.jpeg">
+            <span>Protein</span>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        Copyright © 2026 Fresh Mart
+    </footer>
+</body>
+
+</html>

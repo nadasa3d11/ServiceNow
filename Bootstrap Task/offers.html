@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fresh Mart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .bg-fresh {
+            background-color: #2ecc71 !important;
+        }
+
+        .bg-footer {
+            background-color: #145a32 !important;
+        }
+
+        .coupon-card {
+            border: 2px dashed #dee2e6;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+            background: white;
+        }
+
+        .coupon-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .coupon-side {
+            width: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .promo-code {
+            border: 2px dashed #2ecc71;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        body {
+            padding-top: 80px;
+            padding-bottom: 70px;
+            background-color: #f4f7f6;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-fresh fixed-top px-lg-5">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-3" href="home.html">Fresh Mart</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navOffers">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navOffers">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link text-white" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="products.html">Fruits & Vegetables</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="dairy.html">Dairy</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="bakery.html">Bakery</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold text-white" href="offers.html">Offers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <header class="text-center mb-5">
+            <h1 class="display-5 fw-bold">Exclusive Member Rewards</h1>
+            <p class="text-muted">Clip these digital Coupons to save big in your next visit!</p>
+        </header>
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-xl-6">
+                <div class="coupon-card d-flex h-100 shadow-sm">
+                    <div class="coupon-side bg-success">
+                        <span class="fs-2">20%</span>
+                        <span>OFF</span>
+                    </div>
+                    <div class="p-4 flex-grow-1">
+                        <h4 class="fw-bold">First Order Discount</h4>
+                        <p class="text-secondary">Valid on all fresh produce items</p>
+                        <div class="promo-code text-success mt-2">FRESH20</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6">
+                <div class="coupon-card d-flex h-100 shadow-sm">
+                    <div class="coupon-side bg-warning">
+                        <span class="fs-2">$10</span>
+                        <span>Back</span>
+                    </div>
+                    <div class="p-4 flex-grow-1">
+                        <h4 class="fw-bold">Weekend Special</h4>
+                        <p class="text-secondary">Spend $50 or more and save $10</p>
+                        <div class="promo-code text-warning mt-2" style="border-color: #ffc107;">SAVE10</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6">
+                <div class="coupon-card d-flex h-100 shadow-sm">
+                    <div class="coupon-side bg-primary">
+                        <span class="fs-2">Free</span>
+                    </div>
+                    <div class="p-4 flex-grow-1">
+                        <h4 class="fw-bold">Bakery Bonus</h4>
+                        <p class="text-secondary">Free baguette with any pastry purchase</p>
+                        <div class="promo-code text-primary mt-2" style="border-color: #0d6efd;">YUMMY</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-footer text-white py-3 text-center fixed-bottom shadow-lg">
+        <p class="m-0 small">Copyright © 2026 Fresh Mart</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
