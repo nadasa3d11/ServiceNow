@@ -1,0 +1,17 @@
+<script>
+    function check_password(pass) {
+        try {
+            if (!pass || pass.length < 8) {
+                throw new Error("Password must be at least 8 characters");
+            }
+
+            alert("Password is valid ");
+
+        } catch (error) {
+            alert(error.message);
+        }
+    }
+
+    let userPass = prompt("Enter your password:");
+    check_password(userPass);
+</script>

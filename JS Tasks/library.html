@@ -1,0 +1,134 @@
+<script>
+    let book_title;
+    let author_name;
+    let numOfCopies;
+    let borrowed_copies;
+    let lib_arr = [];
+    let book_data = {};
+
+    while (true) {
+        let select = prompt("Welcome to Library Management System\nPlease Select What do you want to do\n 1--> Add Book\n 2--> Borrow Book \n 3--> Return Book \n 4--> Display Library Report\n 5--> Exit");
+        if (select === null || select === "") break;
+        let choice = parseInt(select);
+        switch (choice) {
+            case 1:
+                add_book();
+                break;
+
+            case 2:
+                borrow_book();
+                break;
+
+            case 3:
+                return_book();
+                break;
+
+            case 4:
+                show_report();
+                break;
+
+            case 5:
+                break;
+
+            default:
+                alert("Invalid choice");
+        }
+        if (choice === 5) break;
+    }
+
+    function calc() {
+        let Total_Copies = 0
+        let Total_Borrowed = 0
+        for (i = 0; i < lib_arr.length; i++) {
+            Total_Copies = Total_Copies + parseInt(lib_arr[i].Copies)
+            Total_Borrowed = Total_Borrowed + parseInt(lib_arr[i].Borrowed)
+        }
+        alert("Total Copy Books: " + Total_Copies + "\n" +
+            "Total Borrowed Books: " + Total_Borrowed
+        )
+    }
+
+    function add_book() {
+        book_title = prompt("Enter The book title")
+        for (i = 0; i < lib_arr.length; i++) {
+            if (book_title.toLowerCase() == lib_arr[i].title.toLowerCase()) {
+                alert("this book is already there")
+                lib_arr[i].Copies++
+                return
+            }
+        }
+        author_name = prompt("Enter the Author name")
+        while (true) {
+            numOfCopies = prompt("Enter the number of copies")
+            numOfCopies = Number(numOfCopies);
+            if (numOfCopies < 1 || numOfCopies == null) {
+                alert("Please Enter a number greater than 0")
+            }
+            else {
+                break
+            }
+        }
+        let book_status ='';
+        book_data = {
+            title: book_title,
+            author: author_name,
+            Copies: numOfCopies,
+            Borrowed: 0,
+            status: book_status
+        }
+        lib_arr.push(book_data)
+    }
+
+    function borrow_book() {
+        book_title = prompt("Enter The book title")
+        let check =false;
+        for (i = 0; i < lib_arr.length; i++) {
+            if (book_title.toLowerCase() == lib_arr[i].title.toLowerCase() && lib_arr[i].Copies !== 0) {
+                lib_arr[i].Copies--;
+                lib_arr[i].Borrowed++;
+                alert("Book Borrowed Successfully")
+                check =true
+            }
+        }
+        if (check === false){
+                alert("that book is not available")
+        }
+    }
+    function return_book() {
+        book_title = prompt("Enter The book title")
+        let check =false;
+        for (i = 0; i < lib_arr.length; i++) {
+            if (book_title.toLowerCase() == lib_arr[i].title.toLowerCase()) {
+                lib_arr[i].Copies++;
+                lib_arr[i].Borrowed--;
+                alert("Book Returned Successfully")
+            }
+        }
+        if (check === false){
+                alert("that book is not available")
+        }
+    }
+    function show_report() {
+        
+        
+        for (i = 0; i < lib_arr.length; i++) {
+            if(lib_arr[i].Copies > 2){
+                lib_arr[i].status ="Available"
+            }
+            else if(lib_arr[i].Copies === 2 ||  lib_arr[i].Copies === 1){
+                lib_arr[i].status ="Limited"
+            }
+            else {
+                lib_arr[i].status ="Out of stock"
+            }
+            alert(
+                lib_arr[i].title + "\n" +
+                lib_arr[i].author + "\n" +
+                lib_arr[i].Copies + "\n" +
+                lib_arr[i].Borrowed +"\n"+
+                lib_arr[i].status
+            )
+        }
+        calc();
+    }
+</script>
