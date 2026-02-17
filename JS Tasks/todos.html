@@ -1,0 +1,26 @@
+<script>
+    async function getUserTodosAsync() {
+        try {
+            const todo = await fetch(`https://jsonplaceholder.typicode.com/todos`)
+            const todo_check = await todo.json()
+            count = todo_check.filter(item => item.completed === true);
+            console.log(count.length)
+
+            title = todo_check.filter(item => {
+                item.title.length > 20;
+                console.log(item.title)
+            }
+            );
+            const new_Map = {}
+            const new_arr = []
+            for (let i = 0; i < todo_check.length; i++) {
+                let item = todo_check[i];
+                new_Map[item.id] = item.title.length;
+            }
+            console.log(new_Map);
+        } catch (err) {
+            console.error("Error: ", err.message)
+        }
+    }
+    getUserTodosAsync()
+</script>

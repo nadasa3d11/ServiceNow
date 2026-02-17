@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Weather</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        #res { margin-top: 20px; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h1>Check Weather</h1>
+    <select id="check_weather">
+        <option value="">--Select a City--</option>
+        <option value="paris">Paris</option>
+        <option value="london">London</option>
+        <option value="cairo">Cairo</option>
+    </select>
+    <button id="Click">Check Now</button> 
+    <h5 id="res"></h5>
+    <script>
+        const button = document.getElementById('Click');
+        const res = document.getElementById('res');
+        function getWeather() {
+            const select = document.getElementById('check_weather');
+            const city = select.value;
+            return new Promise(function(resolve, reject) {
+                res.innerText = "Please wait... loading weather";
+                res.style.color = "black";
+                if (city === "paris") {
+                    setTimeout(function() {
+                        resolve({
+                            cityName: "Paris",
+                            temp: "22 degrees",
+                            sky: "Sunny"
+                        });
+                    }, 2000);
+                } else {
+                    reject("Sorry, we only have data for Paris!");
+                }
+            });
+        }
+        async function displayWeather() {
+            try {
+                const data = await getWeather();
+                res.style.color = "green";
+                res.innerText = "City: " + data.cityName + " | Temp: " + data.temp + " | Sky: " + data.sky;
+
+            } catch (error) {
+                res.style.color = "red";
+                res.innerText = error;
+            }
+        }
+        button.onclick = function() {
+            displayWeather();
+        };
+    </script>
+</body>
+</html>
